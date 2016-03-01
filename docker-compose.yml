@@ -1,0 +1,6 @@
+node-rest:
+    build: ./node-rest
+    expose:
+      - "80"
+    ports:
+      - "80:80"
