@@ -1,11 +1,24 @@
-node-rest:
-  build: ./node-rest
-  expose:
-    - "80"
-  ports:
-    - "80:80"
-  links:
-    - database
-database:
-  image: mongo:3.2.3
-  command: --smallfiles
+version: '2'
+services:
+  database:
+    image: tutum/mongodb:latest
+    environment:
+      - MONGODB_DATABASE=todos
+      - MONGODB_USER=admin
+      - MONGODB_PASS=admin
+      - STORAGE_ENGINE=wiredTiger
+  node-rest:
+    build: ./node-rest
+    expose:
+      - "80"
+    ports:
+      - "80:80"
+    links:
+      - database
+    depends_on:
+      - database
+    environment:
+      - DATABASE_NAME=todos
+      - DATABASE_USER=admin
+      - DATABASE_PASS=admin
+    restart: always

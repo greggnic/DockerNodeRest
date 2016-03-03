@@ -3,7 +3,25 @@ var os = require('os');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Todo = require('./models/todo');
-mongoose.connect('mongodb://database/test');
+var connectionURL = 'mongodb://' 
+		+ process.env.DATABASE_USER 
+		+ ':' 
+		+ process.env.DATABASE_PASS 
+		+ '@database/' 
+		+ process.env.DATABASE_NAME;
+
+
+// var connect = function() {
+//   return mongoose.connect(connectionURL, function(err) {
+//     if (err) {
+//       console.error('Failed to connect to mongo on startup - retrying in 5 sec', err);
+//       setTimeout(connect, 5000);
+//     }
+//   });
+// };
+
+// connect();
+mongoose.connect(connectionURL);
 
 var app = express();
 var router = express.Router();
@@ -37,7 +55,7 @@ router.route('/todos')
       if (err) {
         res.send(err);
       }
-      
+
       res.json(todos);
     });
   });
