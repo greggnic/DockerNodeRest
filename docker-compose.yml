@@ -1,5 +1,13 @@
 version: '2'
 services:
+  load-balancer:
+    build: ./load-balancer
+    links:
+      - node-rest-1:node-rest-1
+      - node-rest-2:node-rest-2
+      - node-rest-3:node-rest-3
+    ports:
+      - "80:80"
   database:
     image: tutum/mongodb:latest
     environment:
@@ -7,12 +15,10 @@ services:
       - MONGODB_USER=admin
       - MONGODB_PASS=admin
       - STORAGE_ENGINE=wiredTiger
-  node-rest:
+  node-rest-1:
     build: ./node-rest
-    expose:
-      - "80"
     ports:
-      - "80:80"
+      - "8080"
     links:
       - database
     depends_on:
@@ -21,4 +27,36 @@ services:
       - DATABASE_NAME=todos
       - DATABASE_USER=admin
       - DATABASE_PASS=admin
+      - SERVICE_80_NAME=http
+      - SERVICE_TAGS=production
+    restart: always
+  node-rest-2:
+    build: ./node-rest
+    ports:
+      - "8080"
+    links:
+      - database
+    depends_on:
+      - database
+    environment:
+      - DATABASE_NAME=todos
+      - DATABASE_USER=admin
+      - DATABASE_PASS=admin
+      - SERVICE_80_NAME=http
+      - SERVICE_TAGS=production
+    restart: always
+  node-rest-3:
+    build: ./node-rest
+    ports:
+      - "8080"
+    links:
+      - database
+    depends_on:
+      - database
+    environment:
+      - DATABASE_NAME=todos
+      - DATABASE_USER=admin
+      - DATABASE_PASS=admin
+      - SERVICE_80_NAME=http
+      - SERVICE_TAGS=production
     restart: always

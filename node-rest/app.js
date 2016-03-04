@@ -10,17 +10,6 @@ var connectionURL = 'mongodb://'
 		+ '@database/' 
 		+ process.env.DATABASE_NAME;
 
-
-// var connect = function() {
-//   return mongoose.connect(connectionURL, function(err) {
-//     if (err) {
-//       console.error('Failed to connect to mongo on startup - retrying in 5 sec', err);
-//       setTimeout(connect, 5000);
-//     }
-//   });
-// };
-
-// connect();
 mongoose.connect(connectionURL);
 
 var app = express();
@@ -61,4 +50,4 @@ router.route('/todos')
   });
 
 app.use('/api', router);
-app.listen(80);
+app.listen(8080);
