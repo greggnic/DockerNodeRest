@@ -3,9 +3,7 @@ services:
   load-balancer:
     build: ./load-balancer
     links:
-      - node-rest-1:node-rest-1
-      - node-rest-2:node-rest-2
-      - node-rest-3:node-rest-3
+      - consul
     ports:
       - "80:80"
   database:
@@ -15,7 +13,21 @@ services:
       - MONGODB_USER=admin
       - MONGODB_PASS=admin
       - STORAGE_ENGINE=wiredTiger
-  node-rest-1:
+  consul:
+    image: progrium/consul
+    ports:
+      - "8400:8400"
+      - "8500:8500"
+      - "8600:565/udp"
+    command: -server -bootstrap -advertise 10.0.2.15
+  registrator:
+    image: gliderlabs/registrator
+    links:
+      - consul
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock"
+    command: -ip=10.0.2.15 consul://consul:8500
+  node-rest:
     build: ./node-rest
     ports:
       - "8080"
@@ -28,35 +40,6 @@ services:
       - DATABASE_USER=admin
       - DATABASE_PASS=admin
       - SERVICE_80_NAME=http
-      - SERVICE_TAGS=production
-    restart: always
-  node-rest-2:
-    build: ./node-rest
-    ports:
-      - "8080"
-    links:
-      - database
-    depends_on:
-      - database
-    environment:
-      - DATABASE_NAME=todos
-      - DATABASE_USER=admin
-      - DATABASE_PASS=admin
-      - SERVICE_80_NAME=http
-      - SERVICE_TAGS=production
-    restart: always
-  node-rest-3:
-    build: ./node-rest
-    ports:
-      - "8080"
-    links:
-      - database
-    depends_on:
-      - database
-    environment:
-      - DATABASE_NAME=todos
-      - DATABASE_USER=admin
-      - DATABASE_PASS=admin
-      - SERVICE_80_NAME=http
-      - SERVICE_TAGS=production
+      - SERVICE_NAME=app
+      - SERVICE_TAGS=node-rest
     restart: always
