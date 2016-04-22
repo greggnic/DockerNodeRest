@@ -1,0 +1,256 @@
+Attaching to dockernoderest_database_1, dockernoderest_consul_1, dockernoderest_registrator_1, dockernoderest_node-rest_1, dockernoderest_wso2_1, dockernoderest_load-balancer_1
+[36mdatabase_1      | [0m$cmd
+[36mdatabase_1      | [0m2016-03-08T14:29:40.085+0000 [initandlisten] MongoDB starting : pid=6 port=27017 dbpath=/data/db master=1 64-bit host=761dba092a1f
+[36mdatabase_1      | [0m2016-03-08T14:29:40.085+0000 [initandlisten] db version v2.6.11
+[36mdatabase_1      | [0m2016-03-08T14:29:40.085+0000 [initandlisten] git version: d00c1735675c457f75a12d530bee85421f0c5548
+[36mdatabase_1      | [0m2016-03-08T14:29:40.085+0000 [initandlisten] build info: Linux build4.ny.cbi.10gen.cc 2.6.32-431.3.1.el6.x86_64 #1 SMP Fri Jan 3 21:39:27 UTC 2014 x86_64 BOOST_LIB_VERSION=1_49
+[36mdatabase_1      | [0m2016-03-08T14:29:40.085+0000 [initandlisten] allocator: tcmalloc
+[36mdatabase_1      | [0m2016-03-08T14:29:40.085+0000 [initandlisten] options: { master: true, net: { http: { RESTInterfaceEnabled: true, enabled: true } }, security: { authorization: "enabled" }, storage: { journal: { enabled: false } } }
+[36mdatabase_1      | [0m************** 
+[36mdatabase_1      | [0mUnclean shutdown detected.
+[36mdatabase_1      | [0mPlease visit http://dochub.mongodb.org/core/repair for recovery instructions.
+[36mdatabase_1      | [0m*************
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] dbexit: 
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] shutdown: going to close listening sockets...
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] shutdown: going to flush diaglog...
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] shutdown: going to close sockets...
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] shutdown: waiting for fs preallocator...
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] shutdown: closing all files...
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] closeAllFiles() finished
+[36mdatabase_1      | [0m2016-03-08T14:29:40.105+0000 [initandlisten] dbexit: really exiting now
+[33mconsul_1        | [0m==> WARNING: Bootstrap mode enabled! Do not enable unless necessary
+[33mconsul_1        | [0m==> WARNING: It is highly recommended to set GOMAXPROCS higher than 1
+[33mconsul_1        | [0m==> Starting raft data migration...
+[32mregistrator_1   | [0m2016/03/08 14:29:41 Starting registrator v6 ...
+[33mconsul_1        | [0m==> Starting Consul agent...
+[32mregistrator_1   | [0m2016/03/08 14:29:41 Forcing host IP to 10.0.2.15
+[33mconsul_1        | [0m==> Starting Consul agent RPC...
+[33mconsul_1        | [0m==> Consul agent running!
+[33mconsul_1        | [0m         Node name: '6e9bcd10e3e5'
+[33mconsul_1        | [0m        Datacenter: 'dc1'
+[33mconsul_1        | [0m            Server: true (bootstrap: true)
+[33mconsul_1        | [0m       Client Addr: 0.0.0.0 (HTTP: 8500, HTTPS: -1, DNS: 53, RPC: 8400)
+[33mconsul_1        | [0m      Cluster Addr: 10.0.2.15 (LAN: 8301, WAN: 8302)
+[33mconsul_1        | [0m    Gossip encrypt: false, RPC-TLS: false, TLS-Incoming: false
+[33mconsul_1        | [0m             Atlas: <disabled>
+[33mconsul_1        | [0m
+[33mconsul_1        | [0m==> Log data will now stream in as it occurs:
+[33mconsul_1        | [0m
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [INFO] serf: EventMemberJoin: 6e9bcd10e3e5 10.0.2.15
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [INFO] serf: EventMemberJoin: 6e9bcd10e3e5.dc1 10.0.2.15
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [WARN] Service name "dockernoderest_load-balancer-80" will not be discoverable via DNS due to invalid characters. Valid characters include all alpha-numerics and dashes.
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [INFO] raft: Node at 10.0.2.15:8300 [Follower] entering Follower state
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [WARN] serf: Failed to re-join any previously known node
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [WARN] serf: Failed to re-join any previously known node
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [INFO] consul: adding server 6e9bcd10e3e5 (Addr: 10.0.2.15:8300) (DC: dc1)
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [INFO] consul: adding server 6e9bcd10e3e5.dc1 (Addr: 10.0.2.15:8300) (DC: dc1)
+[33mconsul_1        | [0m    2016/03/08 14:29:40 [ERR] agent: failed to sync remote state: No cluster leader
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [WARN] raft: Heartbeat timeout reached, starting election
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [INFO] raft: Node at 10.0.2.15:8300 [Candidate] entering Candidate state
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [INFO] raft: Election won. Tally: 1
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [INFO] raft: Node at 10.0.2.15:8300 [Leader] entering Leader state
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [INFO] consul: cluster leadership acquired
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [INFO] consul: New leader elected: 6e9bcd10e3e5
+[33mconsul_1        | [0m    2016/03/08 14:29:41 [INFO] raft: Disabling EnableSingleNode (bootstrap)
+[36mdockernoderest_database_1 exited with code 100
+[0m[34mload-balancer_1 | [0mnginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+[34mload-balancer_1 | [0mnginx: configuration file /etc/nginx/nginx.conf test is successful
+[31mwso2_1          | [0mJAVA_HOME environment variable is set to /usr/lib/jvm/java-7-oracle/
+[31mwso2_1          | [0mCARBON_HOME environment variable is set to /opt/wso2am-1.9.1
+[35mnode-rest_1     | [0mevents.js:141
+[35mnode-rest_1     | [0m      throw er; // Unhandled 'error' event
+[35mnode-rest_1     | [0m      ^
+[35mnode-rest_1     | [0m
+[35mnode-rest_1     | [0mError: failed to connect to [database:27017]
+[35mnode-rest_1     | [0m    at null.<anonymous> (/usr/src/app/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:25)
+[35mnode-rest_1     | [0m    at emitThree (events.js:97:13)
+[35mnode-rest_1     | [0m    at emit (events.js:175:7)
+[35mnode-rest_1     | [0m    at null.<anonymous> (/usr/src/app/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+[35mnode-rest_1     | [0m    at emitTwo (events.js:87:13)
+[35mnode-rest_1     | [0m    at emit (events.js:172:7)
+[35mnode-rest_1     | [0m    at Socket.<anonymous> (/usr/src/app/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+[35mnode-rest_1     | [0m    at emitOne (events.js:77:13)
+[35mnode-rest_1     | [0m    at Socket.emit (events.js:169:7)
+[35mnode-rest_1     | [0m    at connectErrorNT (net.js:997:8)
+[35mdockernoderest_node-rest_1 exited with code 0
+[0m[32mregistrator_1   | [0m2016/03/08 14:29:46 consul: current leader  10.0.2.15:8300
+[32mregistrator_1   | [0m2016/03/08 14:29:46 Using consul adapter: consul://consul:8500
+[32mregistrator_1   | [0m2016/03/08 14:29:46 Listening for Docker events ...
+[32mregistrator_1   | [0m2016/03/08 14:29:46 Syncing services on 5 containers
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: f95052cbaa98 port 80 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_wso2_1:8243'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 2341dc22b842 62ebddcf734b:dockernoderest_wso2_1:8243
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_wso2_1:8280'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 2341dc22b842 62ebddcf734b:dockernoderest_wso2_1:8280
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_wso2_1:9443'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 2341dc22b842 62ebddcf734b:dockernoderest_wso2_1:9443
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 2341dc22b842 62ebddcf734b:dockernoderest_wso2_1:9736
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_wso2_1:9736'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 2341dc22b842 port 9763 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_wso2_1:10397'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 2341dc22b842 62ebddcf734b:dockernoderest_wso2_1:10397
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_wso2_1:7711'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 2341dc22b842 62ebddcf734b:dockernoderest_wso2_1:7711
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [WARN] Service name "dockernoderest_load-balancer-80" will not be discoverable via DNS due to invalid characters. Valid characters include all alpha-numerics and dashes.
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_load-balancer_1:80'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: ba8f7735032a 62ebddcf734b:dockernoderest_load-balancer_1:80
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: ba8f7735032a port 443 not published on host
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 62ebddcf734b no published ports
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 8302 not published on host
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 8301 not published on host
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 8302 not published on host
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 53 not published on host
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 6e9bcd10e3e5 62ebddcf734b:dockernoderest_consul_1:565:udp
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_consul_1:565:udp'
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_consul_1:8400'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 6e9bcd10e3e5 62ebddcf734b:dockernoderest_consul_1:8400
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 8300 not published on host
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 8301 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_consul_1:8500'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: 6e9bcd10e3e5 62ebddcf734b:dockernoderest_consul_1:8500
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: 6e9bcd10e3e5 port 53 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[33mconsul_1        | [0m    2016/03/08 14:29:46 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:46 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[32mregistrator_1   | [0m2016/03/08 14:29:46 ignored: f95052cbaa98 port 80 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:47 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:47 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[33mconsul_1        | [0m    2016/03/08 14:29:49 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:49 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[32mregistrator_1   | [0m2016/03/08 14:29:49 ignored: f95052cbaa98 port 80 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:50 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:50 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[33mconsul_1        | [0m    2016/03/08 14:29:53 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:53 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[32mregistrator_1   | [0m2016/03/08 14:29:53 ignored: f95052cbaa98 port 80 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:29:55 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:29:55 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[31mwso2_1          | [0m[2016-03-08 14:29:57,568]  INFO - CarbonCoreActivator Starting WSO2 Carbon...
+[31mwso2_1          | [0m[2016-03-08 14:29:57,573]  INFO - CarbonCoreActivator Operating System : Linux 4.1.17-boot2docker, amd64
+[31mwso2_1          | [0m[2016-03-08 14:29:57,574]  INFO - CarbonCoreActivator Java Home        : /usr/lib/jvm/java-7-oracle/jre
+[31mwso2_1          | [0m[2016-03-08 14:29:57,574]  INFO - CarbonCoreActivator Java Version     : 1.7.0_80
+[31mwso2_1          | [0m[2016-03-08 14:29:57,575]  INFO - CarbonCoreActivator Java VM          : Java HotSpot(TM) 64-Bit Server VM 24.80-b11,Oracle Corporation
+[31mwso2_1          | [0m[2016-03-08 14:29:57,575]  INFO - CarbonCoreActivator Carbon Home      : /opt/wso2am-1.9.1
+[31mwso2_1          | [0m[2016-03-08 14:29:57,575]  INFO - CarbonCoreActivator Java Temp Dir    : /opt/wso2am-1.9.1/tmp
+[31mwso2_1          | [0m[2016-03-08 14:29:57,575]  INFO - CarbonCoreActivator User             : root, en-US, Etc/UTC
+[31mwso2_1          | [0m[2016-03-08 14:29:57,723]  WARN - ValidationResultPrinter RAM size (MB): 996 of the system is below the recommended minimum size :2048
+[31mwso2_1          | [0m[2016-03-08 14:29:57,725]  WARN - ValidationResultPrinter The default keystore (wso2carbon.jks) is currently being used. To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile.
+[31mwso2_1          | [0m[2016-03-08 14:29:57,727]  WARN - ValidationResultPrinter Swap Memory size (MB): 1153 of the system is below the recommended minimum size :2048
+[31mwso2_1          | [0m[2016-03-08 14:29:57,882]  INFO - AgentHolder Agent created !
+[31mwso2_1          | [0m[2016-03-08 14:29:57,907]  INFO - AgentDS Successfully deployed Agent Client
+[31mwso2_1          | [0m[2016-03-08 14:29:57,956]  INFO - AgentHolder Agent created !
+[31mwso2_1          | [0m[2016-03-08 14:29:57,965]  INFO - AgentDS Successfully deployed Agent Client
+[33mconsul_1        | [0m    2016/03/08 14:30:01 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:30:01 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[32mregistrator_1   | [0m2016/03/08 14:30:01 ignored: f95052cbaa98 port 80 not published on host
+[31mwso2_1          | [0m[2016-03-08 14:30:01,577]  WARN - CarbonTomcatJarScanner Failed to scan [{0}] from classloader hierarchy
+[31mwso2_1          | [0mjava.util.zip.ZipException: error in opening zip file
+[31mwso2_1          | [0m	at java.util.zip.ZipFile.open(Native Method)
+[31mwso2_1          | [0m	at java.util.zip.ZipFile.<init>(ZipFile.java:215)
+[31mwso2_1          | [0m	at java.util.zip.ZipFile.<init>(ZipFile.java:145)
+[31mwso2_1          | [0m	at java.util.jar.JarFile.<init>(JarFile.java:154)
+[31mwso2_1          | [0m	at java.util.jar.JarFile.<init>(JarFile.java:91)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+[31mwso2_1          | [0m	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+[31mwso2_1          | [0m	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig$FragmentJarScannerCallback.scan(ContextConfig.java:2615)
+[31mwso2_1          | [0m	at org.wso2.carbon.tomcat.ext.scan.CarbonTomcatJarScanner.process(CarbonTomcatJarScanner.java:262)
+[31mwso2_1          | [0m	at org.wso2.carbon.tomcat.ext.scan.CarbonTomcatJarScanner.scan(CarbonTomcatJarScanner.java:229)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.processJarsForWebFragments(ContextConfig.java:1871)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1259)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:876)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:374)
+[31mwso2_1          | [0m	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+[31mwso2_1          | [0m	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+[31mwso2_1          | [0m	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5378)
+[31mwso2_1          | [0m	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+[31mwso2_1          | [0m	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+[31mwso2_1          | [0m	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+[31mwso2_1          | [0m	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+[31mwso2_1          | [0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+[31mwso2_1          | [0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+[31mwso2_1          | [0m	at java.lang.Thread.run(Thread.java:745)
+[33mconsul_1        | [0m    2016/03/08 14:30:02 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:30:02 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[31mwso2_1          | [0m[2016-03-08 14:30:05,916]  INFO - EmbeddedRegistryService Configured Registry in 130ms
+[31mwso2_1          | [0m[2016-03-08 14:30:06,259]  INFO - RegistryCoreServiceComponent Registry Mode    : READ-WRITE
+[31mwso2_1          | [0m[2016-03-08 14:30:10,969]  INFO - UserStoreMgtDSComponent Carbon UserStoreMgtDSComponent activated successfully.
+[33mconsul_1        | [0m    2016/03/08 14:30:15 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:30:15 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[32mregistrator_1   | [0m2016/03/08 14:30:15 ignored: f95052cbaa98 port 80 not published on host
+[33mconsul_1        | [0m    2016/03/08 14:30:16 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:30:16 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[31mwso2_1          | [0m[2016-03-08 14:30:18,656] ERROR - ContextConfig contextConfig.jarFile
+[31mwso2_1          | [0mjava.util.zip.ZipException: error in opening zip file
+[31mwso2_1          | [0m	at java.util.zip.ZipFile.open(Native Method)
+[31mwso2_1          | [0m	at java.util.zip.ZipFile.<init>(ZipFile.java:215)
+[31mwso2_1          | [0m	at java.util.zip.ZipFile.<init>(ZipFile.java:145)
+[31mwso2_1          | [0m	at java.util.jar.JarFile.<init>(JarFile.java:154)
+[31mwso2_1          | [0m	at java.util.jar.JarFile.<init>(JarFile.java:91)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+[31mwso2_1          | [0m	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+[31mwso2_1          | [0m	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+[31mwso2_1          | [0m	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:1925)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1900)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1885)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1317)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:876)
+[31mwso2_1          | [0m	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:374)
+[31mwso2_1          | [0m	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+[31mwso2_1          | [0m	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+[31mwso2_1          | [0m	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5378)
+[31mwso2_1          | [0m	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+[31mwso2_1          | [0m	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+[31mwso2_1          | [0m	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+[31mwso2_1          | [0m	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+[31mwso2_1          | [0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+[31mwso2_1          | [0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+[31mwso2_1          | [0m	at java.lang.Thread.run(Thread.java:745)
+[31mwso2_1          | [0m[2016-03-08 14:30:21,776] ERROR - ContextConfig Failed to processes JAR found at URL [jar:file:/opt/wso2am-1.9.1/repository/components/plugins/authenticator_0.7.0.wso2v1.jar!/] for static resources to be included in context with name [jar:file:/opt/wso2am-1.9.1/repository/components/plugins/authenticator_0.7.0.wso2v1.jar!/]
+[31mwso2_1          | [0m[2016-03-08 14:30:22,497]  INFO - TaglibUriRule TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined
+[31mwso2_1          | [0m[2016-03-08 14:30:24,425]  INFO - ClusterBuilder Clustering has been disabled
+[31mwso2_1          | [0m[2016-03-08 14:30:25,261]  WARN - LandingPageWebappDeployer Product landing page not found.
+[31mwso2_1          | [0m[2016-03-08 14:30:25,269]  INFO - UserStoreConfigurationDeployer User Store Configuration Deployer initiated.
+[31mwso2_1          | [0m[2016-03-08 14:30:25,381]  INFO - PassThroughHttpSSLSender Initializing Pass-through HTTP/S Sender...
+[31mwso2_1          | [0m[2016-03-08 14:30:25,431]  INFO - ClientConnFactoryBuilder HTTPS Loading Identity Keystore from : repository/resources/security/wso2carbon.jks
+[31mwso2_1          | [0m[2016-03-08 14:30:25,459]  INFO - ClientConnFactoryBuilder HTTPS Loading Trust Keystore from : repository/resources/security/client-truststore.jks
+[31mwso2_1          | [0m[2016-03-08 14:30:25,614]  INFO - PassThroughHttpSSLSender Pass-through HTTPS Sender started...
+[31mwso2_1          | [0m[2016-03-08 14:30:25,615]  INFO - PassThroughHttpSender Initializing Pass-through HTTP/S Sender...
+[31mwso2_1          | [0m[2016-03-08 14:30:25,621]  INFO - PassThroughHttpSender Pass-through HTTP Sender started...
+[31mwso2_1          | [0m[2016-03-08 14:30:28,131]  INFO - DeploymentInterceptor Deploying Axis2 service: echo {super-tenant}
+[31mwso2_1          | [0m[2016-03-08 14:30:28,696]  INFO - DeploymentEngine Deploying Web service: Echo.aar - file:/opt/wso2am-1.9.1/repository/deployment/server/axis2services/Echo.aar
+[31mwso2_1          | [0m[2016-03-08 14:30:29,427]  INFO - DeploymentInterceptor Deploying Axis2 service: Version {super-tenant}
+[31mwso2_1          | [0m[2016-03-08 14:30:29,519]  INFO - DeploymentEngine Deploying Web service: Version.aar - file:/opt/wso2am-1.9.1/repository/deployment/server/axis2services/Version.aar
+[31mwso2_1          | [0m[2016-03-08 14:30:30,053]  INFO - TomcatGenericWebappsDeployer Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/authenticationendpoint].File[/opt/wso2am-1.9.1/repository/deployment/server/webapps/authenticationendpoint.war]
+[31mwso2_1          | [0m[2016-03-08 14:30:33,006]  INFO - TomcatGenericWebappsDeployer Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/oauth2].File[/opt/wso2am-1.9.1/repository/deployment/server/webapps/oauth2.war]
+[31mwso2_1          | [0m[2016-03-08 14:30:35,369]  INFO - DeploymentInterceptor Deploying Axis2 service: echo {super-tenant}
+[31mwso2_1          | [0m[2016-03-08 14:30:35,476]  INFO - DeploymentInterceptor Deploying Axis2 service: Version {super-tenant}
+[31mwso2_1          | [0m[2016-03-08 14:30:35,532]  INFO - PassThroughHttpSSLListener Initializing Pass-through HTTP/S Listener...
+[31mwso2_1          | [0m[2016-03-08 14:30:35,607]  INFO - PassThroughHttpListener Initializing Pass-through HTTP/S Listener...
+[31mwso2_1          | [0m[2016-03-08 14:30:35,941]  INFO - ModuleDeployer Deploying module: addressing-1.6.1-wso2v10 - file:/opt/wso2am-1.9.1/repository/deployment/client/modules/addressing-1.6.1-wso2v10.mar
+[31mwso2_1          | [0m[2016-03-08 14:30:35,978]  INFO - TCPTransportSender TCP Sender started
+[31mwso2_1          | [0m[2016-03-08 14:30:38,640]  WARN - DefaultSchemaGenerator We don't support method overloading. Ignoring [validateAudienceRestriction]
+[33mconsul_1        | [0m    2016/03/08 14:30:41 [INFO] agent: Synced service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:30:41 added: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[32mregistrator_1   | [0m2016/03/08 14:30:41 ignored: f95052cbaa98 port 80 not published on host
+[31mwso2_1          | [0m[2016-03-08 14:30:44,524]  INFO - DeploymentEngine Deploying Web service: org.wso2.carbon.registry.ws.api-4.2.0 - 
+[33mconsul_1        | [0m    2016/03/08 14:30:45 [INFO] agent: Deregistered service '62ebddcf734b:dockernoderest_node-rest_1:8080'
+[32mregistrator_1   | [0m2016/03/08 14:30:45 removed: f95052cbaa98 62ebddcf734b:dockernoderest_node-rest_1:8080
+[31mwso2_1          | [0m[2016-03-08 14:30:46,037]  INFO - DeploymentInterceptor Deploying Axis2 service: wso2carbon-sts {super-tenant}
+[31mwso2_1          | [0m[2016-03-08 14:30:46,141]  INFO - DeploymentEngine Deploying Web service: org.wso2.carbon.sts-4.2.2 - 
+[31mwso2_1          | [0m[2016-03-08 14:30:46,627]  INFO - DeploymentEngine Deploying Web service: org.wso2.carbon.tryit-4.2.0 - 
+[31mwso2_1          | [0m[2016-03-08 14:30:46,794]  WARN - DefaultSchemaGenerator We don't support method overloading. Ignoring [getAttributeName]
+[31mwso2_1          | [0m[2016-03-08 14:30:47,477]  INFO - CarbonServerManager Repository       : /opt/wso2am-1.9.1/repository/deployment/server/
+Gracefully stopping... (press Ctrl+C again to force)

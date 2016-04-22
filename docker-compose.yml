@@ -12,7 +12,8 @@ services:
       - MONGODB_DATABASE=todos
       - MONGODB_USER=admin
       - MONGODB_PASS=admin
-      - STORAGE_ENGINE=wiredTiger
+      - STORAGE_ENGINE=wiredTiger --smallfiles
+      - JOURNALING=no
   consul:
     image: progrium/consul
     ports:
@@ -43,3 +44,12 @@ services:
       - SERVICE_NAME=app
       - SERVICE_TAGS=node-rest
     restart: always
+  wso2:
+    image: isim/wso2apim
+    ports:
+      - "9443:9443"
+      - "9736:9736"
+      - "8243:8243"
+      - "8280:8280"
+      - "10397:10397"
+      - "7711:7711"
